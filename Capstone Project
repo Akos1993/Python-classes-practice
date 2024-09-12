@@ -30,3 +30,10 @@ class RetailSalesAnalyzer:
     plt.xlabel('Product')
     plt.ylabel('Total Sales')
     plt.show()
+
+analyzer = RetailSalesAnalyzer()
+print(' Total Sales per Product: \n', analyzer.total_sales_per_product())
+print('Best Selling Product: ', analyzer.best_selling_product())
+print(' Average Daily Sales ', analyzer.average_daily_Sales())
+analyzer.plot_sales_per_product()
+analyzer.plot_sales_trend()
