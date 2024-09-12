@@ -1,0 +1,23 @@
+# Python code​​​​​​‌​‌‌‌​‌‌‌​‌‌‌​​​​‌‌​​‌​​​ below
+# Use print("messages...") to debug your solution.
+show_expected_result = False
+show_hints = False
+class BankAccount:
+    def __init__(self, account_id, balance=1000):
+        self.account_id = account_id
+        self.balance = balance
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+        else:
+            print("Invalid deposit amount")
+
+    def get_balance(self):
+        return self.balance
+
+def display_balance(amount):
+    # Your code goes here.
+    account=BankAccount('id',)
+    account.deposit(amount)
+    return account.get_balance()
