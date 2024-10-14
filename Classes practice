@@ -1,0 +1,11 @@
+class Cake:
+    def __init__(self, kind, price, slices):
+        self.kind = kind
+        self.price = price
+        self.slices = slices
+
+    def describe(self):
+        print("The " + self.kind + " costs " + str(self.price) + "$ and is divided into " + str(self.slices) + " slices.")
+
+spice_cake = Cake("spice", 18, 8)
+chocolate_cake = Cake("chocolate", 24, 6)
