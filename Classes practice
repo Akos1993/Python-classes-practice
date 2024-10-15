@@ -1,11 +1,17 @@
-class Cake:
-    def __init__(self, flavor, price, slices):
-        self.flavor = flavor
-        self.price = price
-        self.slices = slices
+class Item:
+    def __init__(self,item_type,price):
+        self.item_type=item_type
+        self.price=price
+
+class Cake(Item):
+    def __init__(self, kind, slices,price):
+            super().__init__("cake",price)
+            self.kind = kind
+            self.slices = slices
 
     def print_description(self):
         print(f"The {self.flavor} cake costs {self.price} and is divided into {self.slices} slices.")
+
     def sell(self,count):
         if(self.slices-count<=0):
             return"Cannot sell more slices than are remaining ("+ str(self.slices)+")!"
