@@ -1,11 +1,18 @@
 class Cake:
-    def __init__(self, kind, price, slices):
-        self.kind = kind
+    def __init__(self, flavor, price, slices):
+        self.flavor = flavor
         self.price = price
         self.slices = slices
 
-    def describe(self):
-        print("The " + self.kind + " costs " + str(self.price) + "$ and is divided into " + str(self.slices) + " slices.")
+    def print_description(self):
+        print(f"The {self.flavor} cake costs {self.price} and is divided into {self.slices} slices.")
+    def sell(self,count):
+        if(self.slices-count<=0):
+            return"Cannot sell more slices than are remaining ("+ str(self.slices)+")!"
+        if(count<=0):
+            return "Cannot sell zero or negative slices"
+        self.slices -=count
+        return self.slices
 
 spice_cake = Cake("spice", 18, 8)
 chocolate_cake = Cake("chocolate", 24, 6)
